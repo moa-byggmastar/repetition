@@ -3,10 +3,10 @@ type CardProps = {
     description: string;
 }
 
-export default function Card({ title, description }: CardProps) {
+export default function Card({ title, description }: { title: string, description: string }) {
     return (
-        <div style={{ border: '1px solid #ccc', padding: '1rem', borderRadius: '8px', maxWidth: '300px' }}>
-            <h2 style={{ margin: '0 0 0.5rem 0' }}>{title}</h2>
+        <div>
+            <h2>{title}</h2>
             <p>{description}</p>
         </div>
     )
